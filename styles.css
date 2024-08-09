@@ -1,0 +1,98 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Status Container */
+.status-container {
+    width: 80%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Status Header */
+.status-container h1 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Status Message */
+.status-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Status Indicator */
+.status-indicator {
+    font-size: 16px;
+    color: #28a745;
+    /* Default status color */
+    font-weight: bold;
+}
+
+/* Status Colors */
+.status-indicator.up {
+    color: #28a745;
+}
+
+.status-indicator.half {
+    color: #ff9633
+}
+
+.status-indicator.down {
+    color: #dc3545;
+}
+
+.status-indicator.maintenance {
+    color: #ffc107;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+details {
+    margin-top: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    background: #e9ecef;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+details[open] summary {
+    background: #d6d6d6;
+}
+
+.details-content {
+    margin-top: 10px;
+}

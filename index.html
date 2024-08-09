@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="status-container">
+        <h1>Service Status</h1>
+        <div class="status-message">
+            Our services are currently:
+            <div class="status-indicator maintenance">Services Under Maintenance</div>
+        </div>
+        <details>
+            <summary>Details</summary>
+            <div class="details-content">
+                <p>An outage has occurred for over 48 hours, causing half of Rural Inscribe and other services to be down. We are currently working on resolving this issue.</p>
+            </div>
+        </details>
+        <div class="footer">
+            Last checked: <span id="last-checked" data-time="2024-08-08T05:00:00Z"></span>
+        </div>
+    </div>
+    <script>
+        function formatDate(date) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
+            return new Intl.DateTimeFormat('en-US', options).format(date);
+        }
+
+        function updateLastChecked() {
+            const element = document.getElementById('last-checked');
+            const timestamp = element.getAttribute('data-time');
+            const date = new Date(timestamp);
+            element.textContent = formatDate(date);
+        }
+
+        updateLastChecked();
+    </script>
+</body>
+
+</html>
