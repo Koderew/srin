@@ -18,7 +18,14 @@
     <meta name="twitter:title" content="Rural Inscribe Status">
     <meta name="twitter:description" content="Rural Inscribe Status page">
     <meta name="twitter:image" content="https://ruralinscribe.net/hq-ri.net.png">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Default to light mode -->
+    <link id="theme-stylesheet" rel="stylesheet" href="styles.css">
+    <script>
+        // Detects the user's theme
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('theme-stylesheet').setAttribute('href', 'dark-styles.css');
+        }
+    </script>
 </head>
 
 <body>
