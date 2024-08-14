@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:site_name" content="Rural Inscribe Status">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Inscribe Status Index</title>
+    <meta name="description" content="Index of 2024's Rural Inscribe status">
+    <meta property="og:url" content="https://status.ruralinscribe.net/index">
+    <meta property="og:image" content="https://ruralinscribe.net/hq-ri.net.png">
+    <meta property="og:type" content="website">
+    <!-- Default to light mode -->
+    <link id="theme-stylesheet" rel="stylesheet" href="styles.css">
+    <script>
+        // Detects the user's preferred color scheme
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.getElementById('theme-stylesheet').setAttribute('href', 'dark-styles.css');
+        }
+    </script>
+</head>
+
+<body>
+    <div class="status-container">
+        <h1>2024's Rural Inscribe Status Index</h1>
+        <p>Progress will be resumed when services are restored.</p>
+        <div class="catalog-container">
+            <div class="catalog-item">
+                <h2>Archive 1</h2>
+                <b><p>8/7–8/?</p></b>
+                <p>On August 7th, 2024, an outage occured, causing services to be down for ? days. To learn more, check out the archive linked.</p>
+                <button onclick="toggleLink(this)">Show Link</button>
+                <a href="#" class="article-link">Read Archive</a>
+            </div>
+            <s>
+                <div class="catalog-item">
+                    <h2>Archive 2</h2>
+                    <b><p>Empty</p></b>
+                    <p>Empty</p>
+                    <button onclick="toggleLink(this)">Show Link</button>
+                    <a href="#" class="article-link">Read Archive</a>
+                </div>
+            </s>
+        </div>
+    </div>
+
+    <script>
+        function toggleLink(button) {
+            const link = button.nextElementSibling;
+            if (link.style.display === "none" || link.style.display === "") {
+                link.style.display = "block";
+                button.textContent = "Hide Link";
+            } else {
+                link.style.display = "none";
+                button.textContent = "Show Link";
+            }
+        }
+    </script>
+</body>
+
+</html>
