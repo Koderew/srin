@@ -12,7 +12,9 @@ body {
     color: #ffffff;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 20px;
     height: 100vh;
 }
 
@@ -48,21 +50,26 @@ body {
     font-weight: bold;
 }
 
-/* Status Colors */
+/* Status Colors for Different Service States */
+
+/* "up" - The service is fully operational with no known issues */
 .status-indicator.up {
-    color: #28a745;
+    color: #28a745; /* Green: Operational */
 }
 
+/* "half" - The service is partially operational, or there are minor issues */
 .status-indicator.half {
-    color: #ff9633
+    color: #ff9633; /* Orange: Degraded Service */
 }
 
+/* "down" - The service is completely non-operational */
 .status-indicator.down {
-    color: #dc3545;
+    color: #dc3545; /* Red: Outage */
 }
 
+/* "maintenance" - The service is undergoing scheduled or unscheduled maintenance */
 .status-indicator.maintenance {
-    color: #ffc107;
+    color: #ffc107; /* Yellow: Maintenance */
 }
 
 /* Footer */
@@ -95,4 +102,63 @@ details[open] summary {
 
 .details-content {
     margin-top: 10px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.dropdown {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid var(--primary-color, #007bff);
+    border-radius: 5px;
+    background-color: var(--background-color, #212529);
+    color: var(--primary-color, #fff);
+    cursor: pointer;
+}
+
+/* Status Container Styling */
+.status-container {
+    width: 80%;
+    max-width: 600px;
+    background: #4d5156;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.status-message {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.status-indicator {
+    font-size: 16px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.status-indicator.maintenance {
+    color: #ffc107;
+}
+
+details {
+    margin-top: 20px;
+    background: #212529;
+    border: 1px solid #5a5b5c;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+    background: #212121;
+    border: 1px solid #6f6f6f;
+    border-radius: 4px;
+    padding: 10px;
 }
