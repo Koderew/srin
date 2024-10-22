@@ -31,21 +31,84 @@
 <body>
     <div class="status-container">
         <h1>Rural Inscribe Status</h1>
-        <div class="status-message">
-            Our services are currently:
-            <div class="status-indicator up">Operational.</div>
+
+        <div class="dropdown-container">
+            <select id="service-dropdown" class="dropdown" onchange="updateStatus()">
+                <option value="all">All</option>
+                <option value="server1">Server 1</option>
+                <option value="server2">Server 2</option>
+            </select>
         </div>
-        <details>
-            <summary>Details</summary>
-            <div class="details-content">
-                <p>Services are working as expected.</p>
+
+        <div class="status-message" id="status-message">
+            Our services are currently:
+            <div class="status-indicator maintenance" id="status-indicator">Partially operational.</div>
+        </div>
+
+        <details id="info-section" style="display:none;">
+            <summary>Service Information</summary>
+            <div class="details-content" id="info-content">
+                <p>Service-specific information will appear here.</p>
             </div>
         </details>
+
+        <details>
+            <summary>Details</summary>
+            <div class="details-content" id="details-content">
+                <p>Only one service is working correctly.</p>
+            </div>
+        </details>
+
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2024-10-10T19:16:47"></span>
+            Last checked: <span id="last-checked" data-time="2024-10-21T21:06:20-04:00"></span>
         </div>
     </div>
+
     <script>
+        const statusData = {
+            all: {
+                status: "Partially operational.",
+                statusClass: "maintenance",
+                details: "Only one service is working correctly."
+            },
+            server1: {
+                status: "Operational.",
+                statusClass: "up",
+                details: "Server 1 is working as expected.",
+                info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
+            },
+            server2: {
+                status: "Down.",
+                statusClass: "maintenance",
+                details: "Server 2 is currently under maintenance. ETA. ~2 hours left.",
+                info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
+            }
+        };
+
+        function updateStatus() {
+            const selectedService = document.getElementById("service-dropdown").value;
+            const statusMessage = document.getElementById("status-message");
+            const statusIndicator = document.getElementById("status-indicator");
+            const detailsContent = document.getElementById("details-content");
+            const infoSection = document.getElementById("info-section");
+            const infoContent = document.getElementById("info-content");
+
+            // Update status message and status indicator class
+            statusIndicator.textContent = statusData[selectedService].status;
+            statusIndicator.className = `status-indicator ${statusData[selectedService].statusClass}`;
+
+            // Update details section
+            detailsContent.innerHTML = `<p>${statusData[selectedService].details}</p>`;
+
+            // Show or hide info section based on service selection (hide for "All")
+            if (selectedService === "all") {
+                infoSection.style.display = "none";
+            } else {
+                infoSection.style.display = "block";
+                infoContent.innerHTML = `<p>${statusData[selectedService].info}</p>`;
+            }
+        }
+
         function formatDate(date) {
             const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
             return new Intl.DateTimeFormat('en-US', options).format(date);
