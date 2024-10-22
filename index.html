@@ -42,7 +42,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator maintenance" id="status-indicator">Partially operational.</div>
+            <div class="status-indicator half" id="status-indicator">Partially operational.</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -55,7 +55,7 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>Only one service is working correctly.</p>
+                <p>Both services are working correctly with minor issues.</p>
             </div>
         </details>
 
@@ -68,8 +68,8 @@
         const statusData = {
             all: {
                 status: "Partially operational.",
-                statusClass: "maintenance",
-                details: "Only one service is working correctly."
+                statusClass: "half",
+                details: "Both services are working correctly with minor issues."
             },
             server1: {
                 status: "Operational.",
@@ -78,9 +78,9 @@
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
-                status: "Down.",
-                statusClass: "maintenance",
-                details: "Server 2 is currently under maintenance. ETA. ~10 minutes left.",
+                status: "Degraded service.",
+                statusClass: "half",
+                details: "Server 2 is currently under maintenance. Everything should still work fine. ETA. ~1 hour left.",
                 info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
             }
         };
