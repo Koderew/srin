@@ -34,6 +34,22 @@ body {
     margin-bottom: 20px;
 }
 
+/* Dropdown Menu Styling */
+.dropdown-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.dropdown {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #007bff;
+    cursor: pointer;
+}
+
 /* Status Message */
 .status-message {
     font-size: 18px;
@@ -44,25 +60,29 @@ body {
 .status-indicator {
     font-size: 16px;
     color: #28a745;
-    /* Default status color */
     font-weight: bold;
 }
 
-/* Status Colors */
+/* Status Colors for Different Service States */
+
+/* "up" - The service is fully operational with no known issues */
 .status-indicator.up {
-    color: #28a745;
+    color: #28a745; /* Green: Operational */
 }
 
+/* "half" - The service is partially operational, or there are minor issues */
 .status-indicator.half {
-    color: #ff9633
+    color: #ff9633; /* Orange: Degraded Service */
 }
 
+/* "down" - The service is completely non-operational */
 .status-indicator.down {
-    color: #dc3545;
+    color: #dc3545; /* Red: Outage */
 }
 
+/* "maintenance" - The service is undergoing scheduled or unscheduled maintenance */
 .status-indicator.maintenance {
-    color: #ffc107;
+    color: #ffc107; /* Yellow: Maintenance */
 }
 
 /* Footer */
