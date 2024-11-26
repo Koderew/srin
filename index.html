@@ -47,7 +47,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator up" id="status-indicator">Under maintenance.</div>
+            <div class="status-indicator up" id="status-indicator">Operational.</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -60,26 +60,26 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>Maintenance.</p>
+                <p>Everything is working as expected.</p>
             </div>
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2024-11-25T17:58:24-05:00"></span>
+            Last checked: <span id="last-checked" data-time="2024-11-25T20:13:12-05:00"></span>
         </div>
     </div>
 
     <script>
         const statusData = {
             all: {
-                status: "Under maintenance.",
-                statusClass: "maintenance",
-                details: "Maintenance."
+                status: "Operational.",
+                statusClass: "up",
+                details: "Everything is working as expected."
             },
             server1: {
-                status: "Under maintenance.",
-                statusClass: "maintenance",
-                details: "Server 1 is currently undergoing scheduled maintenance.",
+                status: "Operational.",
+                statusClass: "up",
+                details: "Server 1 is working as expected.",
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
