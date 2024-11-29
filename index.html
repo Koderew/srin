@@ -47,7 +47,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator up" id="status-indicator">Operational.</div>
+            <div class="status-indicator maintenance" id="status-indicator">Under maintenance.</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -60,21 +60,21 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>Everything is working as expected.</p>
+                <p>Cloudflare is causing issues with the CSP policies being used. It is unknown when this will be resolved.</p>
             </div>
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2024-11-25T20:13:12-05:00"></span>
+            Last checked: <span id="last-checked" data-time="2024-11-29T03:36:32-05:00"></span>
         </div>
     </div>
 
     <script>
         const statusData = {
             all: {
-                status: "Operational.",
-                statusClass: "up",
-                details: "Everything is working as expected."
+                status: "Under maintenance.",
+                statusClass: "maintenance",
+                details: "Cloudflare is causing issues with the CSP policies being used. It is unknown when this will be resolved."
             },
             server1: {
                 status: "Operational.",
