@@ -47,7 +47,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator down" id="status-indicator">Non-Operational.</div>
+            <div class="status-indicator up" id="status-indicator">Operational.</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -60,7 +60,7 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>There is an outage.</p>
+                <p>Everything is working as expected.</p>
             </div>
         </details>
 
@@ -72,20 +72,20 @@
     <script>
         const statusData = {
             all: {
-                status: "Non-Operational.",
-                statusClass: "down",
-                details: "There is an outage."
+                status: "Operational.",
+                statusClass: "up",
+                details: "Everything is working as expected."
             },
             server1: {
                 status: "Operational.",
-                statusClass: "down",
-                details: "There is an outage.",
+                statusClass: "up",
+                details: "Server 1 is working as expected.",
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
                 status: "Operational.",
-                statusClass: "down",
-                details: "There is an outage.",
+                statusClass: "up",
+                details: "Server 2 is working as expected.",
                 info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
             }
         };
