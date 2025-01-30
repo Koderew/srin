@@ -1,11 +1,9 @@
-/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Page Container */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -16,7 +14,6 @@ body {
     height: 100vh;
 }
 
-/* Noscript */
 .noscript-message {
     background-color: #007bff;
     color: #000;
@@ -29,7 +26,6 @@ body {
     z-index: 1000;
 }
 
-/* Status Container */
 .status-container {
     width: 80%;
     max-width: 600px;
@@ -40,14 +36,12 @@ body {
     text-align: center;
 }
 
-/* Status Header */
 .status-container h1 {
     font-size: 24px;
     color: #007bff;
     margin-bottom: 20px;
 }
 
-/* Dropdown Menu Styling */
 .dropdown-container {
     margin: 20px auto;
     text-align: center;
@@ -63,42 +57,38 @@ body {
     cursor: pointer;
 }
 
-/* Status Message */
 .status-message {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
-/* Status Indicator */
 .status-indicator {
     font-size: 16px;
     color: #28a745;
     font-weight: bold;
 }
 
-/* Status Colors for Different Service States */
 
-/* "up" - The service is fully operational with no known issues */
+/* "up" - "The service is fully operational with no known issues" */
 .status-indicator.up {
     color: #28a745; /* Green: Operational */
 }
 
-/* "half" - The service is partially operational, or there are minor issues */
+/* "half" - "The service is partially operational, or there are minor issues" */
 .status-indicator.half {
     color: #ff9633; /* Orange: Degraded Service */
 }
 
-/* "down" - The service is completely non-operational */
+/* "down" - "The service is completely non-operational" */
 .status-indicator.down {
     color: #dc3545; /* Red: Outage */
 }
 
-/* "maintenance" - The service is undergoing scheduled or unscheduled maintenance */
+/* "maintenance" - "The service is undergoing scheduled or unscheduled maintenance" */
 .status-indicator.maintenance {
     color: #ffc107; /* Yellow: Maintenance */
 }
 
-/* Footer */
 .footer {
     margin-top: 20px;
     font-size: 14px;
