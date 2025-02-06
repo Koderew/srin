@@ -65,7 +65,7 @@
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2025-02-06T22:50:12-05:00" title="2025-02-06T22:50:12-05:00"></span>
+            Last checked: <span id="last-checked" data-time="2025-02-06T09:54:13-05:00" title="2025-02-06T22:50:12-05:00"></span>
         </div>
     </div>
 
@@ -98,14 +98,11 @@
             const infoSection = document.getElementById("info-section");
             const infoContent = document.getElementById("info-content");
 
-            // Update status message and status indicator class
             statusIndicator.textContent = statusData[selectedService].status;
             statusIndicator.className = `status-indicator ${statusData[selectedService].statusClass}`;
 
-            // Update details section
             detailsContent.innerHTML = `<p>${statusData[selectedService].details}</p>`;
 
-            // Show or hide info section based on service selection (hide for "All")
             if (selectedService === "all") {
                 infoSection.style.display = "none";
             } else {
