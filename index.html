@@ -18,10 +18,8 @@
     <meta name="twitter:title" content="Rural Inscribe Status">
     <meta name="twitter:description" content="Rural Inscribe Status page">
     <meta name="twitter:image" content="https://ruralinscribe.net/hq-ri.net.png">
-    <!-- Default to light mode -->
     <link id="theme-stylesheet" rel="stylesheet" href="styles.css">
     <script>
-        // Detects the user's theme
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.getElementById('theme-stylesheet').setAttribute('href', 'dark-styles.css');
         }
@@ -47,7 +45,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator maintenance" id="status-indicator">Undergoing maintenance.</div>
+            <div class="status-indicator up" id="status-indicator">Operational.</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -60,32 +58,32 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>The service is undergoing scheduled or unscheduled maintenance.</p>
+                <p>Everything is working as expected.</p>
             </div>
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2025-02-06T09:54:13-05:00" title="2025-02-06T22:50:12-05:00"></span>
+            Last checked: <span id="last-checked" data-time="2025-02-07T11:36:12-05:00" title="2025-02-07T11:36:12-05:00"></span>
         </div>
     </div>
 
     <script>
         const statusData = {
             all: {
-                status: "Undergoing maintenance.",
-                statusClass: "maintenance",
-                details: "The service is undergoing scheduled or unscheduled maintenance."
+                status: "Operational.",
+                statusClass: "up",
+                details: "Everything is working as expected."
             },
             server1: {
-                status: "Undergoing maintenance.",
-                statusClass: "maintenance",
-                details: "The service is undergoing scheduled or unscheduled maintenance.",
+                status: "Operational.",
+                statusClass: "up",
+                details: "Server 1 is working as expected.",
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
-                status: "Undergoing maintenance.",
-                statusClass: "maintenance",
-                details: "The service is undergoing scheduled or unscheduled maintenance.",
+                status: "Operational.",
+                statusClass: "up",
+                details: "Server 2 is working as expected.",
                 info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
             }
         };
