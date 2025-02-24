@@ -45,7 +45,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator half" id="status-indicator">Partially operational.</div>
+            <div class="status-indicator up" id="status-indicator">Operational.</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -58,26 +58,26 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>Read server 1.</p>
+                <p>Everything is working as expected.</p>
             </div>
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2025-02-23T20:34:17-05:00" title="2025-02-23T20:34:17-05:00"></span>
+            Last checked: <span id="last-checked" data-time="2025-02-23T22:06:04-05:00" title="2025-02-23T22:06:04-05:00"></span>
         </div>
     </div>
 
     <script>
         const statusData = {
             all: {
-                status: "Partially operational.",
-                statusClass: "half",
-                details: "Read server 1."
+                status: "Operational.",
+                statusClass: "up",
+                details: "Everything is working as expected."
             },
             server1: {
-                status: "Maintenance.",
-                statusClass: "maintenance",
-                details: "Invalid SSL certificate; ~1 hour.",
+                status: "Operational.",
+                statusClass: "up",
+                details: "Server 1 is working as expected.",
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
