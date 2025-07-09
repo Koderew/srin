@@ -45,7 +45,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator up" id="status-indicator">Operational.</div>
+            <div class="status-indicator down" id="status-indicator">Down</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -58,32 +58,32 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>Everything is working as expected.</p>
+                <p>An unknown outage has occured ans is currently being looked into.</p>
             </div>
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2025-02-23T22:06:04-05:00" title="2025-02-23T22:06:04-05:00"></span>
+            Last checked: <span id="last-checked" data-time="2025-07-09T09:16:32-04:00" title="2025-07-09T09:20:32-04:00"></span>
         </div>
     </div>
 
     <script>
         const statusData = {
             all: {
-                status: "Operational.",
-                statusClass: "up",
-                details: "Everything is working as expected."
+                status: "Down",
+                statusClass: "down",
+                details: "An unknown outage has occured ans is currently being looked into."
             },
             server1: {
-                status: "Operational.",
+                status: "Down",
                 statusClass: "up",
-                details: "Server 1 is working as expected.",
+                details: "Server 1 is offline.",
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
-                status: "Operational.",
+                status: "Down",
                 statusClass: "up",
-                details: "Server 2 is working as expected.",
+                details: "Server 2 is offline.",
                 info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
             }
         };
