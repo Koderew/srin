@@ -45,7 +45,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator down" id="status-indicator">Down</div>
+            <div class="status-indicator up" id="status-indicator">Operational.</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -58,32 +58,32 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>An unknown outage has occured and is currently being looked into. ~1 hour left.</p>
+                <p>Everything is working as expected.</p>
             </div>
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2025-07-09T09:16:32-04:00" title="2025-07-09T09:16:32-04:00"></span>
+            Last checked: <span id="last-checked" data-time="2025-07-12T08:18:26-04:00" title="2025-07-12T08:18:26-04:00"></span>
         </div>
     </div>
 
     <script>
         const statusData = {
             all: {
-                status: "Down",
-                statusClass: "down",
-                details: "An unknown outage has occured and is currently being looked into. ~1 hour left."
+                status: "Operational.",
+                statusClass: "up",
+                details: "Everything is working as expected."
             },
             server1: {
-                status: "Down",
-                statusClass: "down",
-                details: "Server 1 is offline.",
+                status: "Operational.",
+                statusClass: "up",
+                details: "Server 1 is working as expected.",
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
-                status: "Down",
-                statusClass: "down",
-                details: "Server 2 is offline.",
+                status: "Operational.",
+                statusClass: "up",
+                details: "Server 2 is working as expected.",
                 info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
             }
         };
