@@ -45,7 +45,7 @@
 
         <div class="status-message" id="status-message">
             Our services are currently:
-            <div class="status-indicator up" id="status-indicator">Operational.</div>
+            <div class="status-indicator down" id="status-indicator">Offline.</div>
         </div>
 
         <details id="info-section" style="display:none;">
@@ -58,32 +58,32 @@
         <details>
             <summary>Details</summary>
             <div class="details-content" id="details-content">
-                <p>Everything is working as expected.</p>
+                <p>All systems are offline for no known reason.</p>
             </div>
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2026-03-22T16:15:00-04:00" title="2026-03-22T16:15:00-04:00"></span>
+            Last checked: <span id="last-checked" data-time="2025-04-04T13:03:00-05:00" title="2025-04-04T13:03:00-05:00"></span>
         </div>
     </div>
 
     <script>
         const statusData = {
             all: {
-                status: "Operational.",
-                statusClass: "up",
-                details: "Everything is working as expected."
+                status: "Offline.",
+                statusClass: "down",
+                details: "All systems are offline for no known reason."
             },
             server1: {
-                status: "Operational.",
-                statusClass: "up",
-                details: "Server 1 is working as expected.",
+                status: "Offline.",
+                statusClass: "down",
+                details: "Server 1 is offline for no known reason.",
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
-                status: "Operational.",
-                statusClass: "up",
-                details: "Server 2 is working as expected.",
+                status: "Offline.",
+                statusClass: "down",
+                details: "Server 2 is offline for no known reason.",
                 info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
             }
         };
@@ -126,6 +126,3 @@
 </body>
 
 </html>
-
-
-
