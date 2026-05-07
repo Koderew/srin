@@ -40,6 +40,7 @@
                 <option value="all">All</option>
                 <option value="server1">Server 1</option>
                 <option value="server2">Server 2</option>
+                <option value="server3">Server 3</option>
             </select>
         </div>
 
@@ -63,7 +64,7 @@
         </details>
 
         <div class="footer">
-            Last checked: <span id="last-checked" data-time="2025-04-04T13:03:00-05:00" title="2025-04-04T13:03:00-05:00"></span>
+            Last checked: <span id="last-checked" data-time="2026-05-06T20:52:00-04:00" title="2026-05-06T20:52:00-04:00"></span>
         </div>
     </div>
 
@@ -75,16 +76,22 @@
                 details: "All systems are offline for no known reason."
             },
             server1: {
-                status: "Offline.",
-                statusClass: "down",
-                details: "Server 1 is offline for no known reason.",
+                status: "Online.",
+                statusClass: "up",
+                details: "Everything is working as expected.",
                 info: "Server 1 hosts Rural Inscribe itself. Rural Inscribe is not distributed."
             },
             server2: {
+                status: "Online.",
+                statusClass: "up",
+                details: "Everything is working as expected.",
+                info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
+            },
+            server3: {
                 status: "Offline.",
                 statusClass: "down",
-                details: "Server 2 is offline for no known reason.",
-                info: "Server 2 handles everything else that is not commonly associated with Rural Inscribe, as it is more powerful."
+                details: "Server 3 is offline for no known reason.",
+                info: "Server 3 is currently unavailable."
             }
         };
 
